@@ -9,7 +9,7 @@ function compile(): Promise<{
   const compiler = webpack({
     context: __dirname,
     mode: "development",
-    entry: '../mockData/variables.less',
+    entry: '../mock/variables.less',
     output: {
       path: path.resolve(__dirname),
       filename: "bundle.js",
@@ -22,7 +22,7 @@ function compile(): Promise<{
           use: [
             path.resolve(__dirname, './testLoader.js'),
             {
-              loader: path.resolve(__dirname, '../src/index.js'),
+              loader: path.resolve(__dirname, '../../src/index.js'),
             },
           ]
         }

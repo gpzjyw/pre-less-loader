@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`transform less: css 1`] = `
+"
+      /** autoLessVariableExport **/
+// 以下存放业务相关的变量
+@header-height        : 50px;
+
+@nav-head-icon-size   : 14px;
+@nav-side-icon-size   : 18px;
+@page-icon-size       : 20px;
+
+// 导航相关
+@nav-bg               : #374259;
+@nav-side-bg          : #1F2633;
+      :export {
+        headerHeight: @header-height;
+navHeadIconSize: @nav-head-icon-size;
+navSideIconSize: @nav-side-icon-size;
+pageIconSize: @page-icon-size;
+navBg: @nav-bg;
+navSideBg: @nav-side-bg;
+
+      };
+    "
+`;

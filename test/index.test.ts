@@ -4,7 +4,7 @@
 import path from 'path';
 import vm from 'vm';
 import { IFs } from 'memfs';
-import compile from '../test/compile';
+import compile from './util/compile';
 
 test('transform less', async () => {
   const { stats, compiler } = await compile();
@@ -19,10 +19,7 @@ test('transform less', async () => {
     {
       module: {},
     }
-  )
+  );
 
-  console.log(result.default.css);
-
-  // console.log(stats.toJson());
-  expect(stats).not.toBeNull();
+  expect(result.default.css).toMatchSnapshot('css');
 });
